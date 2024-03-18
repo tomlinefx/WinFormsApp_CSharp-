@@ -16,6 +16,8 @@ namespace WinFormsApp_CSharp教育コンテンツ
 
             inst町名.Start("東町");
             inst郵便.Start("880129");
+
+            // TEST
         }
     }
 
