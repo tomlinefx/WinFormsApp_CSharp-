@@ -11,7 +11,7 @@ namespace WinFormsApp_CSharp教育コンテンツ
     {
         public TemplateMethodSample()
         {
-            var inst町名 = new 町名抽出();
+            var inst町名 = new SelectData町名();
             var inst郵便 = new 郵便番号抽出();
 
             inst町名.Start("東町");
@@ -22,7 +22,7 @@ namespace WinFormsApp_CSharp教育コンテンツ
     }
 
 
-    public class 町名抽出 : FileProcess
+    public class SelectData町名 : FileProcess
     {
         public override List<string> SelectData(string name)
         {
