@@ -5,25 +5,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WinFormsApp_CSharp教育コンテンツ.InferfaceSamples
+namespace WinFormsApp_CSharp教育コンテンツ.AbstructSamples
 {
-    internal class FileProcessInterface
+    public abstract class FileProcess
     {
-        ISelectData SelectData { get; }
-        public FileProcessInterface(ISelectData selectData)
-        {
-            SelectData = selectData;
-        }
-
         public void Start(string name)
         {
             ReadFile();
 
-            SelectData.GetList(name);
+            SelectData(name);
 
             WriteFile();
-
-            DisplayData();
         }
 
         void ReadFile()
@@ -31,16 +23,12 @@ namespace WinFormsApp_CSharp教育コンテンツ.InferfaceSamples
             Console.WriteLine("沖縄CSVファイル読込");
         }
 
+        public abstract List<string> SelectData(string name);
+
 
         void WriteFile()
         {
             Debug.WriteLine("抽出データCSVファイル保存");
-        }
-
-
-        void DisplayData()
-        {
-            Debug.WriteLine("抽出データ画面表示");
         }
     }
 }

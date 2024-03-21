@@ -14,10 +14,10 @@ namespace WinFormsApp_CSharp教育コンテンツ.InferfaceSamples
             var inst町名 = new SelectData町名();
             var inst郵便 = new SelectData郵便番号();
 
-            var proc町名 = new FileProcessInterface(inst町名);
+            var proc町名 = new FileProcess(inst町名);
             proc町名.Start("東町");
 
-            var proc郵便 = new FileProcessInterface(inst郵便);
+            var proc郵便 = new FileProcess(inst郵便);
             proc郵便.Start("880129");
         }
     }
